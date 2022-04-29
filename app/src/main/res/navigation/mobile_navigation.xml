@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mobile_navigation"
+            app:startDestination="@id/ratingFragment">
+    <fragment android:id="@+id/photosFragment"
+              android:name="com.inc.vr.corp.apps.rawgames.ui.fragments.games.GamesFragment"
+              tools:layout="@layout/fragment_game_list">
+        <action android:id="@+id/action_gamesFragment_to_ratingFragment"
+                app:destination="@id/ratingFragment" app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment android:id="@+id/ratingFragment"
+            android:name="com.inc.vr.corp.apps.rawgames.ui.fragments.rating.RatingFragment"
+              tools:layout="@layout/fragment_rating_list">
+        <action android:id="@+id/action_ratingFragment_to_gameFragment"
+                app:destination="@id/photosFragment" app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment android:id="@+id/CariFragment"
+        android:name="com.inc.vr.corp.apps.rawgames.ui.fragments.cari.CariFragment"
+        tools:layout="@layout/fragment_cari">
+        <action android:id="@+id/action_cariFragment_to_gameFragment"
+            app:destination="@id/photosFragment" app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment android:id="@+id/GameDetailFragment"
+              android:name="com.inc.vr.corp.apps.rawgames.ui.fragments.gameDetail.GameDetailFragment"
+              tools:layout="@layout/fragment_game">
+    </fragment>
+</navigation>
