@@ -1,6 +1,9 @@
 package com.inc.vr.corp.apps.rawgames.di.viewmodel
 
 import androidx.lifecycle.ViewModel
+import com.inc.vr.corp.apps.rawgames.domain.entity.CariModel
+import com.inc.vr.corp.apps.rawgames.ui.fragments.cari.CariViewModel
+import com.inc.vr.corp.apps.rawgames.ui.fragments.cari.CariViewModel_Factory
 import com.inc.vr.corp.apps.rawgames.ui.fragments.gameDetail.GameDetailViewModel
 import com.inc.vr.corp.apps.rawgames.ui.fragments.splash.SplashModel
 import com.inc.vr.corp.apps.rawgames.ui.fragments.games.GamesViewModel
@@ -31,5 +34,10 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(clazz = SplashModel::class)
     abstract fun bindSplashModel(viewModel: SplashModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(clazz = CariViewModel::class)
+    abstract fun bindCariModel(viewModel: CariViewModel): ViewModel
 
 }

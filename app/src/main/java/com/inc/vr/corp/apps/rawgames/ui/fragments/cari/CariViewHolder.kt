@@ -18,10 +18,10 @@ class CariViewHolder(view: View) : RecyclerView.ViewHolder(view) {
      */
     fun bind(game: Models.CariResult?) {
             game?.apply {
-                val imgUri = backgroundImage.toUri().buildUpon().scheme("https").build()
+                //val imgUri = backgroundImage.toUri().buildUpon().scheme("https").build()
                 itemView.apply {
                     Glide.with(imgPreview.context)
-                        .load(imgUri)
+                        .load(backgroundImage)
                         .apply(
                             RequestOptions()
                                 .placeholder(R.drawable.loading_animation)
